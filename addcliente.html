@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Adicinar cliente</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-imageupload/dist/css/bootstrap-imageupload.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="navbar"></div>
+        
+        <div class="container">
+            <h1>Adicionar cliente</h1>  
+            <div id="content">
+                <div class="form-group">
+                    <label for="nome_input">Nome: </label>
+                    <input type="text"  class="form-control" id="nome_input">
+                </div>
+                <div class="form-group">
+                    <label for="data_input">Data: </label>
+                    <input type="text" class="form-control" id="data_input">
+                </div>
+                <div class="form-group">
+                    <label for="cpf_input">CPF: </label>
+                    <input type="text" class="form-control" id="cpf_input">
+                </div>
+                <div class="imageupload panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <p>Imagem: </p>
+                    </div>
+                    <div class="file-tab panel-body">
+                        <label class="btn btn-default btn-file">
+                            <span>Procurar</span>
+                            <!-- The file is stored here. -->
+                            <input type="file" name="image-file" id="imagem_input">
+                        </label>
+                        <button type="button" class="btn btn-default">Remove</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="btn">Enviar</button>
+            </div>
+        </div>
+      
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="node_modules/bootstrap-imageupload/dist/js/bootstrap-imageupload.min.js"></script>
+        <script src="js/addCliente.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

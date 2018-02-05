@@ -1,0 +1,20 @@
+{
+  "name": "controledireto",
+  "version": "0.1.0",
+  "description": "Gestor de vendas direta",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Venda",
+    "Gestor"
+  ],
+  "author": "Ricardo Barbosa",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "bootstrap-imageupload": "^1.1.3",
+    "jquery": "^3.3.1"
+  }
+}

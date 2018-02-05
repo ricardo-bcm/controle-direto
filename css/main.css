@@ -1,0 +1,30 @@
+.navbar {
+  width:100%;
+  background-color: #292B2C;
+}
+
+.navbar a {
+	color: #fff;
+}
+
+div .dropdown-item {
+	color: #000;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.container h1 {
+	align-content: center;
+	text-align: center;
+}
+
+#content {
+	width: 50%;
+	margin: auto;
+	margin-top: 5%;
+	align-content: center;
+}
+

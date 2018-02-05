@@ -1,0 +1,1 @@
+$('#navbar').load("navbarReusable.html");
