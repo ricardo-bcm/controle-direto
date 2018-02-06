@@ -28,3 +28,14 @@ div .dropdown-item {
 	align-content: center;
 }
 
+.img-to {
+	background-color: #DDD;
+	padding: 12px;
+	border-radius: 10px;
+	margin-left: -15px;
+}
+
+#infos {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}

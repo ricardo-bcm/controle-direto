@@ -15,33 +15,42 @@
         <div class="container">
             <h1>Adicionar cliente</h1>  
             <div id="content">
-                <div class="form-group">
-                    <label for="nome_input">Nome: </label>
-                    <input type="text"  class="form-control" id="nome_input">
-                </div>
-                <div class="form-group">
-                    <label for="data_input">Data: </label>
-                    <input type="text" class="form-control" id="data_input">
-                </div>
-                <div class="form-group">
-                    <label for="cpf_input">CPF: </label>
-                    <input type="text" class="form-control" id="cpf_input">
-                </div>
-                <div class="imageupload panel panel-default">
-                    <div class="panel-heading clearfix">
-                        <p>Imagem: </p>
+            <form>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Nome</span>
                     </div>
+                    <input type="text"  class="form-control" id="nome_input" required>
+                </div>
+                    
+                <div class="form-row">
+                <div class="input-group mb-3 col-md-6">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Data</span>
+                    </div>
+                    <input type="date" class="form-control"  id="data_input">
+                </div>
+
+                <div class="input-group mb-3 col-md-6">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">CPF</span>
+                    </div>
+                    <input type="number" class="form-control" id="cpf_input" minlength="11" maxlength="11">
+                </div>
+            </div>
+                <div class="imageupload">
                     <div class="file-tab panel-body">
                         <label class="btn btn-default btn-file">
-                            <span>Procurar</span>
+                            <span class="img-to">Procurar</span>
                             <!-- The file is stored here. -->
                             <input type="file" name="image-file" id="imagem_input">
                         </label>
-                        <button type="button" class="btn btn-default">Remove</button>
+                        <button type="button" class="btn btn-default">Remover</button>
                     </div>
                 </div>
 
                 <button class="btn btn-primary" id="btn">Enviar</button>
+            </form>
             </div>
         </div>
       
@@ -49,7 +58,7 @@
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="node_modules/bootstrap-imageupload/dist/js/bootstrap-imageupload.min.js"></script>
-        <script src="js/addCliente.js"></script>
+        <script src="js/addcliente.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

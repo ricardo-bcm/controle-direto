@@ -1,32 +1,7 @@
 $('.imageupload').imageupload();
 
-const list = async () => {
-	const url = `database.php`;
-	try {
-		let response = await fetch( url );
-		if ( response.ok ) {
-			let jsonResponse = await response.json();
-			console.log(jsonResponse);
-			return jsonResponse;
-		}
-	} catch(e) {
-		console.log(e);
-	}
-};
-
-let showResponse = json => {
-	document.getElementById('infos').innerHTML = `
-	${json.nome} <br>
-	${json.data_nascimento} <br>
-	${json.cpf} <br>
-	<img src="${json.img_perfil}"> <br>
-	`;
-};
-
-//list().then( response => showResponse( response ) );
-
 document.getElementById('btn').onclick = () => {
-	adicionarCliente().then( response => alert('Adiconado com sucesso!') );
+	adicionarCliente().then( response => console.log('Adiconado com sucesso!') );
 };
 
 
