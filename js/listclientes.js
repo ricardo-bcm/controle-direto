@@ -1,5 +1,5 @@
 const list = async () => {
-	const url = `database.php`;
+	const url = `listclientes.php`;
 	try {
 		let response = await fetch( url );
 		if ( response.ok ) {
@@ -16,7 +16,7 @@ let showResponse = json => {
 	let htmlFormated = '<ul class="list-group">';
 	 json.forEach( function(element, index) {
 	 	htmlFormated += `
-		<li class="list-group-item"><img src="${element.img_perfil}" height="96px" width="96px"> ${element.nome} </li>
+		<a href="perfilcliente.html?id=${element.id}"><li class="list-group-item"><img src="${element.img_perfil}" height="96px" width="96px"> ${element.nome} </li>
 	 	`
 	 });
 
