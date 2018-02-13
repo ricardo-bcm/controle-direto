@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Gestor de vendas direta">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Controle Direto</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <div id="navbar"></div>
+      <div class="container">
+        <h1>Adicionar Transação</h1>  
+        <div id="content">
+          <form>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Cliente</span>
+              </div>
+              <input type="search" class="form-control" id="search-input" placeholder="Buscar..." autocomplete="off">
+            </div>
+            <ul class="list-group" id="search-results"></ul>
+            <div class="form-row">
+              <div class="input-group mb-3 col-md-6">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Tipo</span>
+                </div>
+                <select class="form-control" id="tipo-transacao-input">
+                  <option value="VENDA">VENDA</option>
+                  <option value="RECEBIMENTO">RECEBIMENTO</option>
+                </select>
+              </div>
+              <div class="input-group mb-3 col-md-6">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Valor</span>
+                </div>
+                <input type="number" class="form-control" id="valor-input" step="0.01" required>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Data</span>
+                </div>
+                <input type="date" class="form-control"  id="data-transacao-input">
+              </div>
+            </div> <!-- form-row -->
+            <div class="form-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Detalhes</span>
+              </div>
+              <textarea name="detalhes" class="form-control" id="comentarios-input" cols="20" rows="4"></textarea>
+            </div>
+            <button class="btn btn-primary" id="submit-button">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/addtransacao.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+</html>

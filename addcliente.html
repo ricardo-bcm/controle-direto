@@ -1,63 +1,104 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Adicinar cliente</title>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/bootstrap-imageupload/dist/css/bootstrap-imageupload.min.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <div id="navbar"></div>
-        <div class="container">
-            <h1>Adicionar cliente</h1>  
-            <div id="content">
-            <form>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">Nome</span>
-                    </div>
-                    <input type="text"  class="form-control" id="nome_input" required>
-                </div>
-                    
-                <div class="form-row">
-                <div class="input-group mb-3 col-md-6">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">Data</span>
-                    </div>
-                    <input type="date" class="form-control"  id="data_input">
-                </div>
-
-                <div class="input-group mb-3 col-md-6">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">CPF</span>
-                    </div>
-                    <input type="number" class="form-control" id="cpf_input" minlength="11" maxlength="11">
-                </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adicinar cliente</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-imageupload/dist/css/bootstrap-imageupload.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="container">
+      <h1>Adicionar cliente</h1>
+      <div id="caixa-aviso"></div>
+      <div id="content">
+        <form id="cliente-form">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Nome</span>
             </div>
-                <div class="imageupload">
-                    <div class="file-tab panel-body">
-                        <label class="btn btn-default btn-file">
-                            <span class="img-to">Procurar</span>
-                            <!-- The file is stored here. -->
-                            <input type="file" name="image-file" id="imagem_input">
-                        </label>
-                        <button type="button" class="btn btn-default">Remover</button>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary" id="btn">Enviar</button>
-            </form>
+            <input type="text"  class="form-control" id="nome-input" required>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Aniversário</span>
             </div>
-        </div>
-      
+            <input type="date" class="form-control"  id="data-input">
+          </div>
+          <div id="telefones-conteiner">
+            <span id="add-telefone-btn" class="btn btn-primary">Telefones</span>
+            <div id="telefones-input">
+              <div class="form-row">
+                <div class="input-group mb-3 col-md-7">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Número</span>
+                  </div>
+                  <input type="text"  class="form-control" id="telefone1-input">
+                </div>
+                <div class="input-group mb-3 col-md-5">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Operadora</span>
+                  </div>
+                  <input type="text"  class="form-control" id="telefone1-op-input">
+                </div>
+              </div> <!-- form-row-tel-1 -->
+              <div class="form-row">
+                <div class="input-group mb-3 col-md-7">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Número</span>
+                  </div>
+                  <input type="text"  class="form-control" id="telefone2-input">
+                </div>
+                <div class="input-group mb-3 col-md-5">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Operadora</span>
+                  </div>
+                  <input type="text"  class="form-control" id="telefone2-op-input">
+                </div>
+              </div> <!-- form-row-tel-2 -->
+              <div class="form-row">
+                <div class="input-group mb-3 col-md-7">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Número</span>
+                  </div>
+                  <input type="text"  class="form-control" id="telefone3-input">
+                </div>
+                <div class="input-group mb-3 col-md-5">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Operadora</span>
+                  </div>
+                  <input type="text"  class="form-control" id="telefone3-op-input">
+                </div>
+              </div> <!-- form-row-tel-3 -->
+            </div> <!-- telefones-input -->
+          </div>
+          <div class="imageupload">
+            <div class="file-tab panel-body">
+              <label class="btn btn-default btn-file">
+                <span class="img-to">Procurar</span>
+                <input type="file" name="image-file" id="imagem-input">
+              </label>
+              <button type="button" class="btn btn-default">Remover</button>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Observação</span>
+            </div>
+            <textarea name="detalhes" class="form-control" id="observacao-input" cols="20" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" id="btn">Enviar</button>
+        </form>
+      </div> <!-- Content -->
+    </div> <!-- Conteiner -->
 
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="node_modules/bootstrap-imageupload/dist/js/bootstrap-imageupload.min.js"></script>
-        <script src="js/addcliente.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/bootstrap-imageupload/dist/js/bootstrap-imageupload.min.js"></script>
+    <script src="js/addcliente.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
